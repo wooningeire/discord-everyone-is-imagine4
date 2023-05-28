@@ -1,0 +1,34 @@
+.user-name, .member-username-inner, .guild-inner > a, .channel-voice-states > li > div > span, .account .username, .account .discriminator, .member-activity strong {
+  font-size: 0 !important;
+}
+.user-name:before, .member-username-inner:before, .channel-voice-states > li > div > span:before, .account .username:before, .member-activity strong:before {
+  content: "Imagine4";
+}
+.account .discriminator:before {
+  content: "#8208";
+}
+.account .discriminator:before, .bot-tag:before {
+  font-size: 10px;
+}
+.member-activity strong:before {
+  font-size: 11px;
+}
+.channel-voice-states > li > div > span:before {
+  font-size: 13px;
+}
+.username:before {
+  font-size: 14px;
+}
+.user-name, .member-username-inner:before {
+  color: #188a08 !important;
+}
+.user-name:before, .member-username-inner:before {
+  font-size: 16px;
+}
+.avatar-large, .avatar-small {
+  background-image: url("https://cdn.discordapp.com/avatars/136611352692129792/a_eda4383b399e14d2bb6989a2ae9624e1.gif?size=256") !important; 
+}
+.bot-tag {
+  display: none;
+}
+/* https://cdn.discordapp.com/avatars/136611352692129792/41be7e09f1cbb4e85f8a926409eedbd3.png?size=256 */

@@ -1,0 +1,93 @@
+/* Replacing names */
+
+.user-name, .member-username-inner, .message-group > .comment > h2 > strong, .channel-voice-states > li > div > span, .username, .discriminator, .member-activity strong, .activity strong, .typing strong, .channel-private, .private .channel-name, .channel-activity strong, .nickname, .guild-name, .guild-nick, .guild-header span, .search-result-name, .scroller > header, .connected-account-name, .member-role .name, .displayed-nick, .display-username {
+  font-size: 0 !important;
+}
+.guild-inner > a, .avatar-large {
+  font-size: 0 !important;
+}
+.user-name:before, .member-username-inner:before, .message-group > .comment > h2 > strong:before, .channel-voice-states > li > div > span:before, .username:before, .member-activity strong:before, .activity strong:before, .typing strong:before, .channel-private:before, .private .channel-name:before, .channel-activity strong:before, .nickname:before, .guild-name:before, .guild-nick:before, .guild-header span:before, .search-result-name:before, .scroller > header:before, .displayed-nick:before {
+  content: "Imagine4";
+}
+.discriminator:before {
+  content: "#8208";
+}
+.display-username:before {
+  content: "Imagine4#8208";
+}
+.connected-account-name:before {
+  content: "Imagine4d";
+}
+.member-role .name:before {
+  content: "#TeamJoho";
+}
+.member-role:nth-child(2) .name:before {
+  content: "I bought a thing with Tant's face";
+}
+
+/* Name replacement sizes */
+
+.account .discriminator:before, .bot-tag:before, .channel-activity strong:before {
+  font-size: 10px;
+}
+.member-activity strong:before, .guild-nick:before {
+  font-size: 11px;
+}
+.discord-tag .discriminator:before, .scroller > header:before, .member-role .name:before {
+  font-size: 12px;
+}
+.channel-voice-states > li > div > span:before, .typing strong:before {
+  font-size: 13px;
+}
+.username:before, .private .channel-name:before {
+  font-size: 14px;
+}
+.activity strong:before, .search-result-name:before {
+  font-size: 15px;
+}
+.user-name:before, .member-username-inner:before, .message-group > .comment > h2 > strong:before, .discord-tag .username:before, .nickname:before, .guild-name:before, .guild-header span:before, .connected-account-name:before, .displayed-nick:before, .display-username:before {
+  font-size: 16px;
+}
+.channel-name.channel-private:before, .channel-name.channel-private:before {
+  font-size: 20px;
+}
+.guild-name > .username:before {
+  font-size: 0;
+}
+
+/* Colors */
+
+.user-name, .member-username-inner:before {
+  color: rgb(24, 138, 8) !important;
+}
+.member-role {
+  color: rgb(24, 138, 8) !important;
+  background: rgba(24, 138, 8, 0.1) !important;
+  border: 1px solid rgba(24, 138, 8, 0.5) !important;
+}
+.member-role:nth-child(2) {
+  color: rgb(80, 244, 7) !important;
+  background: rgba(80, 244, 7, 0.1) !important;
+  border: 1px solid rgba(80, 244, 7, 0.5) !important;
+}
+
+/* Images */
+
+.avatar-large, .avatar-small, .avatar-xsmall, .avatar-popout, .avatar-profile {
+  background-image: url("https://cdn.discordapp.com/avatars/136611352692129792/a_eda4383b399e14d2bb6989a2ae9624e1.gif?size=256") !important; 
+}
+.display-avatar {
+  content: url("https://cdn.discordapp.com/avatars/136611352692129792/a_eda4383b399e14d2bb6989a2ae9624e1.gif?size=256") !important; 
+}
+
+/* Miscellaneous */
+
+.channel-members-wrap .member {
+  height: 40px;
+}
+.member-role {
+  height: 12px;
+}
+.bot-tag, .member-role:nth-child(2) ~ .member-role {
+  display: none;
+}
