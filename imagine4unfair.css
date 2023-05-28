@@ -1,93 +1,387 @@
+:root {
+  /* Edit these variables for customization :) */
+  --username:        "Imagine4";
+  --discriminator:   "8208";
+  --profile-picture: url("https://cdn.discordapp.com/avatars/136611352692129792/a_44d82a7e3abd45e71ea24ba340f667d8.gif?size=256");
+  --emailaddress:    "idontactuallyknowheremailsothisisjustfilleriguess@gmail.com";
+  
+  --twitch-name:     "imagine4d";
+  --twitter-name:    "iAmAFig";
+  --youtube-name:    "Imagine 4";
+}
+
+
 /* Replacing names */
 
-.user-name, .member-username-inner, .message-group > .comment > h2 > strong, .channel-voice-states > li > div > span, .username, .discriminator, .member-activity strong, .activity strong, .typing strong, .channel-private, .private .channel-name, .channel-activity strong, .nickname, .guild-name, .guild-nick, .guild-header span, .search-result-name, .scroller > header, .connected-account-name, .member-role .name, .displayed-nick, .display-username {
+.user-name,                              /* usernames in chat */
+.member-username-inner,                  /* usernames on member list */
+.channel-voice-states > li > div > span,
+.username,
+.discriminator,
+.member-activity strong,
+.activity strong,
+.typing strong,
+.channel-name.channel-private,
+.channel.private .channel-name,
+.channel-activity strong,
+.nickname,
+.guild-name,
+.guild-nick,
+.guild-header span,
+.search-result-name,
+.scroller > header,
+.connected-account-name,
+.member-role .name, /* roles */
+.ui-role-list-role > div:first-child,
+.displayed-nick,
+.display-username,
+.friends-row .status-text > strong,
+.mention,
+.containerDefault-7RImuF .draggable-3SphXU > div > *:nth-child(2), /* voice channels */
+.private .empty-message strong,
+.chat .welcome-message h1, /* chat welcome message */
+.system-message .system-message-content a:first-of-type,
+.context-menu .item-group .item.danger > span, /* kick and ban buttons */
+.guild-settings-members-member .name-and-tag .name, /* server settings menu */
+.guild-settings-members-member .name-and-tag .tag,
+.guild-settings-banned-user-modal .user-username, /* ban menu user tag */
+.guild-settings-banned-user-modal .user-discrim,
+.userHook-DFT5u7 > span:first-child, /* audit logs */
+.discrim-xHdOK3,
+.guild-settings-audit-logs-user-filter-popout .user-text .username, /* audit logs filter-by-user */
+.guild-settings-audit-logs-user-filter-popout .user-text .discriminator,
+.flexChild-1KGW5q:nth-child(2) .ui-quick-select-value,
+.selectable-prgIYK, /* user account page */
+.emoji-row .emoji-row-text, /* emoji adder */
+.name-1VHFX9 > span, /* reaction adder */
+#friends .friends-table .friend-table-add-wrapper .friend-table-add-description.success strong /* friends add success */ {
   font-size: 0 !important;
 }
-.guild-inner > a, .avatar-large {
+
+.mention {
+  line-height: 0;
+}
+.private-channels .channel .channel-name {
+  line-height: 1.4;
+}
+.channel-members .member .member-activity {
+  line-height: 8px;
+}
+.popout .username,
+.channel-members .member .member-username-inner {
+  line-height: 12px !important
+}
+.popout .nickname {
+  line-height: 16px !important;
+}
+
+.guild-inner > a,
+.avatar-large {
   font-size: 0 !important;
 }
-.user-name:before, .member-username-inner:before, .message-group > .comment > h2 > strong:before, .channel-voice-states > li > div > span:before, .username:before, .member-activity strong:before, .activity strong:before, .typing strong:before, .channel-private:before, .private .channel-name:before, .channel-activity strong:before, .nickname:before, .guild-name:before, .guild-nick:before, .guild-header span:before, .search-result-name:before, .scroller > header:before, .displayed-nick:before {
-  content: "Imagine4";
+
+.user-name:before,
+.member-username-inner:before,
+.channel-voice-states > li > div > span:before,
+.username:before,
+.member-activity strong:before,
+.activity strong:before,
+.typing strong:before,
+.channel-name.channel-private:after,
+.channel.private .channel-name:before,
+.channel-activity strong:before,
+.nickname:before,
+.guild-name:before,
+.guild-nick:before,
+.guild-header span:before,
+.search-result-name:before,
+.scroller > header:before,
+.displayed-nick:before,
+.friends-row .status-text > strong:before,
+.containerDefault-7RImuF .draggable-3SphXU > div > *:nth-child(2):before,
+.system-message .system-message-content a:first-of-type:before,
+.guild-settings-members-member .name-and-tag .name:before,
+.guild-settings-banned-user-modal .user-username:before,
+.userHook-DFT5u7 > span:first-child:before,
+.guild-settings-audit-logs-user-filter-popout .user-text .username:before,
+.flexChild-1KGW5q:nth-child(2) .ui-quick-select-value:before,
+.ui-form-item:first-child .selectable-prgIYK:before,
+.emoji-row .emoji-row-text:before,
+.name-1VHFX9 > span:first-child:before {
+  content: var(--username);
 }
-.discriminator:before {
-  content: "#8208";
+
+.mention:before,
+.private .empty-message strong:before {
+  content: "@" var(--username);
 }
-.display-username:before {
-  content: "Imagine4#8208";
+
+.chat .welcome-message h1:before {
+  content: "Welcome to the server, " var(--username) "!";
 }
+
+.context-menu .item-group:nth-child(3) .item.danger > span:before,
+.context-menu .item-group:nth-child(4) .item.danger > span:before {
+  content: "Kick " var(--username);
+}
+.context-menu .item-group:nth-child(3) .item.danger:last-child > span:before,
+.context-menu .item-group:nth-child(4) .item.danger:last-child > span:before {
+  content: "Ban " var(--username);
+}
+
+.discriminator:before,
+.guild-settings-banned-user .username .discrim:before,
+.guild-settings-banned-user-modal .user-discrim:before,
+.discrim-xHdOK3:before,
+.guild-settings-audit-logs-user-filter-popout .user-text .discriminator:before,
+.ui-form-item:first-child .selectable-prgIYK > span:before {
+  content: "#" var(--discriminator);
+}
+
+.display-username:before,
+#friends .friends-table .friend-table-add-wrapper .friend-table-add-description.success strong:before,
+.name-1VHFX9 > span:last-child:before {
+  content: var(--username) "#" var(--discriminator);
+}
+
+.guild-settings-members-member .name-and-tag .tag:before {
+  content: "@" var(--username) "#" var(--discriminator);
+}
+
 .connected-account-name:before {
-  content: "Imagine4d";
+  content: var(--username);
 }
-.member-role .name:before {
-  content: "#TeamJoho";
+.connected-account-icon[src="/assets/d62770cb3449a04c7292fc2ad7a9ffd9.png"] + .connected-account-name-inner .connected-account-name:before {
+  content: var(--twitch-name);
 }
-.member-role:nth-child(2) .name:before {
+.connected-account-icon[src="/assets/c795f9ef8be0d19a0555ee96213abd00.png"] + .connected-account-name-inner .connected-account-name:before {
+  content: var(--twitter-name);
+}
+.connected-account-icon[src="/assets/3f902475b3576b6d008f27d1731e4c86.png"] + .connected-account-name-inner .connected-account-name:before {
+  content: var(--youtube-name);
+}
+
+.ui-form-item:last-child .selectable-prgIYK:before {
+  content: var(--emailaddress);
+}
+
+.member-role:nth-child(1) .name:before,
+.ui-role-list-role:nth-child(1) > div:first-child:before {
+  content: "Stemff";
+}
+
+.member-role:nth-child(2) .name:before,
+.ui-role-list-role:nth-child(2) > div:first-child:before {
+  content: "#TeamYessoan";
+}
+
+.member-role:nth-child(3) .name:before,
+.ui-role-list-role:nth-child(3) > div:first-child:before {
   content: "I bought a thing with Tant's face";
 }
 
+
 /* Name replacement sizes */
 
-.account .discriminator:before, .bot-tag:before, .channel-activity strong:before {
+.accountDetails-15i-_e .discriminator:before,
+.bot-tag:before,
+.channel-activity strong:before {
   font-size: 10px;
 }
-.member-activity strong:before, .guild-nick:before {
+
+.member-activity strong:before,
+.guild-nick:before {
   font-size: 11px;
 }
-.discord-tag .discriminator:before, .scroller > header:before, .member-role .name:before {
+
+.discord-tag .discriminator:before,
+.scroller > header:before,
+.member-role .name:before,
+.ui-role-list-role > div:first-child:before,
+.discrim-xHdOK3:before,
+.guild-settings-audit-logs-user-filter-popout .user-text .discriminator:before {
   font-size: 12px;
 }
-.channel-voice-states > li > div > span:before, .typing strong:before {
+
+.channel-voice-states > li > div > span:before,
+.typing strong:before,
+.context-menu .item-group .item.danger > span:before,
+.flexChild-1KGW5q:nth-child(2) .ui-quick-select-value:before {
   font-size: 13px;
 }
-.username:before, .private .channel-name:before {
+
+.channel-textarea-autocomplete .username:before,
+.container-iksrDt .username:before,
+.channel.private .channel-name:before,
+.containerDefault-7RImuF .draggable-3SphXU > div > *:nth-child(2):before,
+#friends .friends-table .friend-table-add-wrapper .friend-table-add-description.success strong:before,
+.guild-settings-members-member .name-and-tag .tag:before {
   font-size: 14px;
 }
-.activity strong:before, .search-result-name:before {
+
+.activity strong:before,
+.search-result-name:before,
+.mention:before {
   font-size: 15px;
 }
-.user-name:before, .member-username-inner:before, .message-group > .comment > h2 > strong:before, .discord-tag .username:before, .nickname:before, .guild-name:before, .guild-header span:before, .connected-account-name:before, .displayed-nick:before, .display-username:before {
+
+.user-name:before,
+.channel-members .member .member-username-inner:before,
+.popout .discord-tag .username:before,
+.nickname:before,
+.guild-name:before,
+.guild-header span:before,
+.connected-account-name:before,
+.displayed-nick:before,
+.display-username:before,
+.friends-row .status-text > strong:before,
+.private .empty-message strong:before,
+.system-message .system-message-content a:first-of-type:before,
+#user-profile-modal .header .header-info .header-info-inner .discord-tag .discriminator:before,
+#friends .friends-table .friends-row .discord-tag .username:before,
+.invite-settings-invite-row .username:before,
+.guild-settings-banned-user .username:before,
+.guild-settings-members-member .name-and-tag .name:before,
+.guild-settings-banned-user .username .discrim:before,
+.userHook-DFT5u7 > span:first-child:before,
+.guild-settings-audit-logs-user-filter-popout .user-text .username:before,
+.ui-form-item .selectable-prgIYK:before,
+.ui-form-item .selectable-prgIYK > span:before,
+.emoji-row .emoji-row-text:before,
+.name-1VHFX9 > span:before {
   font-size: 16px;
 }
-.channel-name.channel-private:before, .channel-name.channel-private:before {
+
+.chat .welcome-message h1:before,
+#user-profile-modal .header .header-info .header-info-inner .discord-tag .username:before {
+  font-size: 18px;
+}
+
+.channel-name.channel-private:before,
+.channel-name.channel-private:after {
   font-size: 20px;
 }
+
+.guild-settings-banned-user-modal .user-username:before,
+.guild-settings-banned-user-modal .user-discrim:before {
+  font-size: 24px;
+}
+
+.channel-name.channel-private:after {
+  margin-left: -4px;
+  line-height: 2;
+}
+
 .guild-name > .username:before {
   font-size: 0;
 }
 
 /* Colors */
 
-.user-name, .member-username-inner:before {
-  color: rgb(24, 138, 8) !important;
+.user-name,
+.member-username-inner,
+.system-message .system-message-content a:first-of-type,
+.guild-settings-members-member .name-and-tag .name {
+  color: rgb(12, 225, 241) !important;
 }
-.member-role {
-  color: rgb(24, 138, 8) !important;
-  background: rgba(24, 138, 8, 0.1) !important;
-  border: 1px solid rgba(24, 138, 8, 0.5) !important;
+
+.member-role:not(.member-role-add):nth-child(1),
+.ui-role-list-role:nth-child(1) {
+  background: rgba(12, 225, 241, 0.1) !important;
+  border: 1px solid rgba(12, 225, 241, 0.5) !important;
 }
-.member-role:nth-child(2) {
-  color: rgb(80, 244, 7) !important;
+
+.member-role:not(.member-role-add):nth-child(1) {
+  color: rgb(12, 225, 241) !important;
+}
+
+.member-role:not(.member-role-add):nth-child(2),
+.ui-role-list-role:nth-child(2) {
+  background: rgba(208, 95, 3, 0.1) !important;
+  border: 1px solid rgba(208, 95, 3, 0.5) !important;
+}
+
+.member-role:not(.member-role-add):nth-child(2) {
+  color: rgb(208, 95, 3) !important;
+}
+
+.member-role:not(.member-role-add):nth-child(3),
+.ui-role-list-role:nth-child(3) {
   background: rgba(80, 244, 7, 0.1) !important;
   border: 1px solid rgba(80, 244, 7, 0.5) !important;
 }
 
+.member-role:not(.member-role-add):nth-child(3) {
+  color: rgb(80, 244, 7) !important;
+}
+
+.mention {
+  background: rgba(115, 139, 215, .1);
+  color: #7289da !important;
+  transition: background-color .05s, color .05s;
+}
+
+.mention:hover {
+  background: rgba(115, 139, 215, .7);
+  color: #fff;
+}
+
+.mentioned .mention {
+  background: transparent;
+}
+
+.mentioned .mention:hover {
+  color: #7289da !important;
+}
+
+
 /* Images */
 
-.avatar-large, .avatar-small, .avatar-xsmall, .avatar-popout, .avatar-profile {
-  background-image: url("https://cdn.discordapp.com/avatars/136611352692129792/a_eda4383b399e14d2bb6989a2ae9624e1.gif?size=256") !important; 
+.avatar-xsmall,
+.avatar-small,
+.avatar-large,
+.avatar-xxlarge,
+.avatar-popout,
+.avatar-profile,
+.avatarContainer-303pFz > div,
+.avatar-uploader-inner,
+.avatar-1BXaQj {
+  background-image: var(--profile-picture) !important;
 }
+
 .display-avatar {
-  content: url("https://cdn.discordapp.com/avatars/136611352692129792/a_eda4383b399e14d2bb6989a2ae9624e1.gif?size=256") !important; 
+  content: var(--profile-picture) !important;
 }
+
 
 /* Miscellaneous */
 
 .channel-members-wrap .member {
   height: 40px;
 }
+
 .member-role {
   height: 12px;
 }
-.bot-tag, .member-role:nth-child(2) ~ .member-role {
+
+.ui-role-list-role {
+  height: 16px;
+  padding-top: 4px;
+}
+
+.bot-tag,
+.botTag-1OwMgs,
+.member-role:nth-child(3) ~ .member-role,
+.ui-role-list-role:nth-child(3) ~ .ui-role-list-role,
+.note {
   display: none;
+}
+
+.private .topic  {
+  height: 0;
+}
+
+.popout .quick-message-wrapper > *::placeholder,
+.popout .quick-message-wrapper > *::-webkit-input-placeholder {
+  color: transparent;
 }
